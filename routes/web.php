@@ -56,3 +56,7 @@ Route::get('/profile',function(){
 Route::get('/income',function(){
     return view('income');
 });
+
+Route::get('/verify-account/{token}',function($token){
+    return view('verify_account',['token' => $token]);
+})->name('verify.account');
